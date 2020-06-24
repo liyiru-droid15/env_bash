@@ -164,4 +164,4 @@ if __name__ == '__main__':
         day = str(d.day) if d.day >=10 else '0' + str(d.day)
         download_rmrb(year, month, day, 'data')
         print("爬取完成：" + year + month + day)
-        time.Sleep(random.randint(2,13))
+        time.sleep(random.randint(2,13))
