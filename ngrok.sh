@@ -37,3 +37,6 @@ make release-server release-client
 #GOOS=windows GOARCH=amd64 make release-client
 #GOOS=linux GOARCH=arm make release-client
 
+###### 常见问题 ######
+#客户端错误 control recovering from failure x509: certificate relies on legacy Common Name field, use SANs or temporarily enable Common Name matching with GODEBUG=x509ignoreCN=0 
+#这个是go版本问题，设置环境变量GODEBUG=x509ignoreCN=0或去申请正规的ssl证书, eg: linux下设置环境变量 export GODEBUG=x509ignoreCN=0
