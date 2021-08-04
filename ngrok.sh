@@ -40,3 +40,9 @@ make release-server release-client
 ###### 常见问题 ######
 #客户端错误 control recovering from failure x509: certificate relies on legacy Common Name field, use SANs or temporarily enable Common Name matching with GODEBUG=x509ignoreCN=0 
 #这个是go版本问题，设置环境变量GODEBUG=x509ignoreCN=0或去申请正规的ssl证书, eg: linux下设置环境变量 export GODEBUG=x509ignoreCN=0
+
+#使用自己申请的ssl证书
+#只需要把自己申请的网站证书.crt文件复制一份覆盖到assets/client/tls/ngrokroot.crt然后重新编译客户端并且重启ngrok服务即可
+
+# ngrok监听ssh
+# 客户端加上参数 -proto=tcp 22即可
